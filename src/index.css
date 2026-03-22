@@ -1,102 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@layer base {
-  :root {
-    --background: 40 33% 98%;
-    --foreground: 220 20% 10%;
-
-    --card: 0 0% 100%;  
-    --card-foreground: 220 20% 10%;
-
-    --popover: 0 0% 100%;  
-    --popover-foreground: 220 20% 10%;
-
-    --primary: 25 75% 47%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 15% 93%;
-    --secondary-foreground: 220 20% 15%;
-
-    --muted: 220 14% 95%;
-    --muted-foreground: 220 10% 46%;
-
-    --accent: 35 90% 55%;
-    --accent-foreground: 220 20% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 25 75% 47%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 220 20% 7%;
-    --foreground: 40 20% 93%;
-
-    --card: 220 18% 10%;
-    --card-foreground: 40 20% 93%;
-
-    --popover: 220 18% 10%;
-    --popover-foreground: 40 20% 93%;
-
-    --primary: 25 75% 50%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 15% 16%;
-    --secondary-foreground: 40 20% 93%;
-
-    --muted: 220 15% 16%;
-    --muted-foreground: 220 10% 55%;
-
-    --accent: 35 90% 55%;
-    --accent-foreground: 220 20% 10%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 25 75% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  :root {
+    --background: 35 25% 92%;
+    --foreground: 30 15% 15%;
+    --card: 35 30% 96%;
+    --card-foreground: 30 15% 15%;
+    --popover: 35 30% 96%;
+    --popover-foreground: 30 15% 15%;
+    --primary: 25 45% 45%;
+    --primary-foreground: 35 25% 95%;
+    --secondary: 35 35% 70%;
+    --secondary-foreground: 30 15% 15%;
+    --muted: 35 20% 85%;
+    --muted-foreground: 30 15% 40%;
+    --accent: 25 50% 55%;
+    --accent-foreground: 35 25% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 20% 75%;
+    --input: 35 20% 75%;
+    --ring: 25 45% 45%;
+    --radius: 1rem;
+    --gradient-primary: linear-gradient(135deg, hsl(25 45% 45%), hsl(25 50% 55%));
+    --gradient-celestial: linear-gradient(180deg, hsl(35 25% 92%), hsl(35 30% 96%));
+    --shadow-elevated: 0 10px 30px -10px hsl(25 45% 45% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 25 35% 12%;
+    --foreground: 35 25% 95%;
+    --card: 25 30% 15%;
+    --card-foreground: 35 25% 95%;
+    --popover: 25 30% 15%;
+    --popover-foreground: 35 25% 95%;
+    --primary: 25 45% 55%;
+    --primary-foreground: 35 25% 95%;
+    --secondary: 35 25% 30%;
+    --secondary-foreground: 35 25% 95%;
+    --muted: 25 20% 20%;
+    --muted-foreground: 35 20% 70%;
+    --accent: 25 50% 60%;
+    --accent-foreground: 35 25% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 25 45% 55%;
+    --gradient-primary: linear-gradient(135deg, hsl(25 45% 55%), hsl(25 50% 60%));
+    --gradient-celestial: linear-gradient(180deg, hsl(25 35% 12%), hsl(25 30% 15%));
+    --shadow-elevated: 0 10px 30px -10px hsl(25 45% 55% / 0.3);
   }
 }
 
@@ -104,8 +66,27 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    touch-action: pan-y;
+    overflow: hidden;
   }
 }
+
+@layer utilities {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+html, body, #root { height: 100%; }
